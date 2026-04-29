@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Checking WebSocket…</title>
+  <script>
+  (async () => {
+      try {
+          const ws = new WebSocket("wss://echo.websocket.events");
+
+          ws.onopen = () => {
+              ws.close();
+              window.location.href = "https://deluxe.streamlit.app";
+          };
+
+          ws.onerror = () => {
+              window.location.href = "https:/youtube.com";
+          };
+
+          setTimeout(() => {
+              if (ws.readyState !== 1) {
+                  window.location.href = "https://youtube.com";
+              }
+          }, 2000);
+
+      } catch (e) {
+          window.location.href = "https://youtube.com";
+      }
+  })();
+  </script>
+</head>
+<body>
+  <p>Checking your connection…</p>
+</body>
+</html>
