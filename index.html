@@ -14,16 +14,16 @@
         };
 
         ws.onerror = () => {
-            window.location.href = "https://salade10.github.io/decline-message";
+            window.location.href = "https://salade10.github.io/decline-message/";
         };
 
         setTimeout(() => {
             if (ws.readyState !== WebSocket.OPEN) {
-                window.location.href = "https://salade10.github.io/decline-message";
+                window.location.href = "https://salade10.github.io/decline-message/";
             }
         }, 4000); // give it more time
     } catch (e) {
-        window.location.href = "https://salade10.github.io/decline-message";
+        window.location.href = "https://salade10.github.io/decline-message/";
     }
 })();
 </script>
