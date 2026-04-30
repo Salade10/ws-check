@@ -3,31 +3,31 @@
 <head>
   <meta charset="utf-8">
   <title>Checking WebSocket…</title>
-<script>
-(async () => {
-    try {
-        const ws = new WebSocket("wss://echo.websocket.events");
+  <script>
+  (async () => {
+      try {
+          const ws = new WebSocket("wss://ws.postman-echo.com/raw");
 
-        ws.onopen = () => {
-            ws.close();
-            window.location.href = "https://deluxe.streamlit.app";
-        };
+          ws.onopen = () => {
+              ws.close();
+              window.location.href = "https://deluxe.streamlit.app";
+          };
 
-        ws.onerror = () => {
-            window.location.href = "https://salade10.github.io/decline-message/";
-        };
+          ws.onerror = () => {
+              window.location.href = "https://salade10.github.io/decline-message";
+          };
 
-        setTimeout(() => {
-            if (ws.readyState !== WebSocket.OPEN) {
-                window.location.href = "https://salade10.github.io/decline-message/";
-            }
-        }, 4000); // give it more time
-    } catch (e) {
-        window.location.href = "https://salade10.github.io/decline-message/";
-    }
-})();
-</script>
+          setTimeout(() => {
+              if (ws.readyState !== 1) {
+                  window.location.href = "https://salade10.github.io/decline-message";
+              }
+          }, 2000);
 
+      } catch (e) {
+          window.location.href = "https://salade10.github.io/decline-message";
+      }
+  })();
+  </script>
 </head>
 <body>
   <p>Checking your connection…</p>
