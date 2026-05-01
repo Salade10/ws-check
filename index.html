@@ -14,17 +14,17 @@
           };
 
           ws.onerror = () => {
-              window.location.href = "https://Salade10.github.io/ws-check/decline-message/";
+              window.location.href = "https://Salade10.github.io/ws-check/decline-message.html";
           };
 
           setTimeout(() => {
               if (ws.readyState !== 1) {
-                  window.location.href = "https://Salade10.github.io/ws-check/decline-message/";
+                  window.location.href = "https://Salade10.github.io/ws-check/decline-message.html";
               }
           }, 2000);
 
       } catch (e) {
-          window.location.href = "https://Salade10.github.io/ws-check/decline-message/";
+          window.location.href = "https://Salade10.github.io/ws-check/decline-message.html";
       }
   })();
   </script>
