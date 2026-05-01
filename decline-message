@@ -1,10 +1,78 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <title>Checking WebSocket…</title>
+<meta charset="UTF-8">
+<title>Deluxe Properties</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+    }
+
+    .property-wrapper {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 25px;
+    }
+
+    .property-card {
+        width: 90%;
+        max-width: 350px;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        background: white;
+        padding-bottom: 15px;
+        text-align: center;
+    }
+
+    .hero-img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .property-price {
+        font-size: 22px;
+        font-weight: bold;
+        margin: 10px 0 5px;
+    }
+
+    .property-type,
+    .property-features,
+    .property-location {
+        margin: 4px 0;
+        color: #444;
+    }
+
+    .view-btn {
+        margin-top: 10px;
+        padding: 10px 20px;
+        background: black;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+</style>
 </head>
+
 <body>
-  <p><strong>Webscoket error - This website is not available on your network</strong></p>
+
+<h1>Deluxe Properties</h1>
+
+<!-- Répéter ce bloc 6 fois -->
+<div class="property-wrapper">
+    <div class="property-card">
+        <img src="image/image2.jpg" class="hero-img">
+        <p class="property-price">£478,000</p>
+        <p class="property-type">Maison à vendre</p>
+        <p class="property-features">5 chambres | 7 pièces</p>
+        <p class="property-location">Sud Cannes</p>
+        <button class="view-btn">View</button>
+    </div>
+</div>
+
 </body>
 </html>
